@@ -1,0 +1,63 @@
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 60px 50px;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-card {
+    width: 100%;
+    max-width: 340px;
+    height: 340px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .gallery-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .gallery-title {
+    position: absolute;
+    bottom: 0; /* Placer le titre en bas */
+    left: 0; /* Placer le titre à gauche */
+    width: 100%; /* Largeur du titre égale à la largeur de la carte */
+    padding: 10px; /* Un peu de padding pour le titre */
+    color: white; /* Texte en blanc */
+    font-size: 1.2em;
+    text-align: left;
+  }
+}
+
+
+
+
+
