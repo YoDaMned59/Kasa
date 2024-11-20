@@ -1,0 +1,57 @@
+
+
+/* Conteneur de chaque collapse */
+.collapseContainer {
+    width: calc(100% - 417px); /* Calcul de largeur : 100% de la fenêtre moins 208.5px de chaque côté */
+    max-width: 1023px; /* Limite la largeur à 1023px */
+    margin-left: 208.5px;
+    margin-right: 208.5px;
+    border-radius: 15px;
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet d'élévation */
+    overflow: hidden;
+}
+
+/* En-tête du collapse */
+.collapse-header {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le titre et l'icône */
+    align-items: center; /* Aligner verticalement le texte et l'icône */
+    background-color: #FF6060; /* Couleur d'arrière-plan de l'en-tête */
+    color: white;
+    padding: 1rem; /* Padding autour du texte */
+    cursor: pointer;
+    border-radius: 15px 15px 0 0; /* Arrondir les coins supérieurs */
+}
+
+/* Titre du collapse */
+.collapse-header h2 {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    text-align: left; /* Aligné à gauche */
+}
+
+/* Icône du collapse */
+.collapse-icon {
+    font-size: 1.2rem; /* Taille de l'icône */
+    transition: transform 0.3s ease; /* Transition fluide lors du changement de direction */
+}
+
+.collapse-icon.open {
+    transform: rotate(180deg); /* Rotation de l'icône quand ouvert */
+}
+
+/* Contenu du collapse */
+.collapse-content {
+    padding: 1rem; /* Padding autour du contenu */
+    background-color: #F6F6F673; /* Fond légèrement transparent */
+    font-size: 1rem; /* Taille de la police du contenu */
+    border-radius: 0 0 15px 15px; /* Arrondir les coins inférieurs */
+}
+
+/* Style pour le collapse fermé */
+.collapse-content p {
+    margin: 0; /* Supprimer les marges autour du texte */
+}
+

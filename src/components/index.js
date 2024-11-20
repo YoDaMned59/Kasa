@@ -1,4 +1,4 @@
 import { Header } from "./header";
 export { Header };
-import { Banner } from "./banner";
-export { Banner };
+import { Footer } from "./footer";
+export { Footer };
