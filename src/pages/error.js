@@ -1,5 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/errorPages.scss'
 
-export const Error = () => {
-    return (<p>we are in error page</p>)
-}
+
+
+export const ErrorPage = () => {
+    return (
+        <div className="error-page">
+            <h1 className="error-code">404</h1>
+            <p className="error-message">Oups ! La page que vous recherchez n'existe pas.</p>
+            <Link to="/" className="home-link">
+                Retour à l'accueil
+            </Link>
+        </div>
+    );
+};
+

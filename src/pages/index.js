@@ -1,4 +1,4 @@
-import { About } from "./about";
-import { Home } from "./home";
-import { Error } from "./error";
-export { About, Home, Error}
+export { About } from './about';
+export { Home } from './home';
+export { ErrorPage as Error } from './error';
+
