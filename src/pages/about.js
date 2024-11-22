@@ -25,13 +25,15 @@ export const About = () => {
     return (
         <main>
             <BannerAbout />
-            {collapseData.map((data, index) => (
-                <Collapse
-                    key={index}
-                    title={data.title}
-                    content={data.content}
-                />
-            ))}
+            <div className="collapse-container">
+                {collapseData.map((data, index) => (
+                    <Collapse
+                        key={index}
+                        title={data.title}
+                        content={data.content}
+                    />
+                ))}
+            </div>
             <Footer />
         </main>
     )

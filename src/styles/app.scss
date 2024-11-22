@@ -1,4 +1,10 @@
-body, html {
-    margin: 0;
-    padding: 0;
+html, body {
+    height: 100%;  // S'assurer que le body prend toute la hauteur de la fenêtre
+    margin: 0;     // Enlever les marges par défaut
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; // Prendre tout l'espace disponible
 }
