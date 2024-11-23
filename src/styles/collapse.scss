@@ -16,10 +16,15 @@
     max-width: 1023px;
     margin-left: 208.5px;
     margin-right: 208.5px;
-    border-radius: 15px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: hidden;   
+    border-radius: 15px;
+
+    &.open {
+        border-radius: 15px 15px 0 0;
+        background-color: #F6F6F6;
+    }
 
     .collapse-header {
         display: flex;
@@ -29,7 +34,6 @@
         color: white;
         padding: 16px;
         cursor: pointer;
-        border-radius: 15px 15px 0 0;
 
         h2 {
             margin: 0;
@@ -59,6 +63,9 @@
         background-color: #F6F6F6;
         font-size: 16px;
         line-height: 1.5;
+        border-radius: 0 0 15px 15px;
+        background-color: #F6F6F6;
     }
 }
+
 

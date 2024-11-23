@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import de Link pour naviguer vers la page de détail
-import Housings from "../data/housings.json"; // Import des données JSON
+import { Link } from "react-router-dom";
+import Housings from "../data/housings.json";
 import "../styles/gallery.scss"
 
 export const Gallery = () => {
@@ -8,10 +8,9 @@ export const Gallery = () => {
         <div className="galleryContainer">
             {Housings.map((housing) => (
                 <article className="gallery-card" key={housing.id}>
-                    {/* Le lien vers la page de détail */}
                     <Link to={`/Housing/${housing.id}`} className="gallery-link">
                         <img
-                            src={housing.cover} // Image de couverture
+                            src={housing.cover}
                             alt={housing.title}
                             className="gallery-image"
                         />

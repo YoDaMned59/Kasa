@@ -1,7 +1,7 @@
 import React from "react";
 import { BannerAbout } from "../components/banner";
-import { Footer } from "../components/footer";
 import { Collapse } from "../components/collapse";
+import { Footer } from "../components/footer";
 
 export const About = () => {
     const collapseData = [
@@ -23,19 +23,22 @@ export const About = () => {
         }
     ];
     return (
-        <main>
-            <BannerAbout />
-            <div className="collapse-container">
-                {collapseData.map((data, index) => (
-                    <Collapse
-                        key={index}
-                        title={data.title}
-                        content={data.content}
-                    />
-                ))}
-            </div>
+        <div className="page-container">
+            <main>
+                <BannerAbout />
+                <div className="collapse-container">
+                    {collapseData.map((data, index) => (
+                        <Collapse
+                            key={index}
+                            title={data.title}
+                            content={data.content}
+                        />
+                    ))}
+                </div>
+            </main>
             <Footer />
-        </main>
-    )
-}
+        </div>
+    );
+};
+
 

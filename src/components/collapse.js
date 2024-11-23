@@ -6,7 +6,7 @@ export const Collapse = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="collapse">
+        <div className={`collapse ${isOpen ? "open" : ""}`}>
             <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
                 <h2>{title}</h2>
                 <span className="collapse-icon">
@@ -25,6 +25,7 @@ export const Collapse = ({ title, content }) => {
         </div>
     );
 };
+
 
 
 
