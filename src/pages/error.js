@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Footer} from "../components/footer"
 import '../styles/errorPages.scss'
 
 
@@ -15,7 +14,6 @@ export const ErrorPage = () => {
                 Retour à l'accueil
             </Link>
         </div>
-        <Footer />
         </main>
     );
 };
