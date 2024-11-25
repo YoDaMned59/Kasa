@@ -8,7 +8,7 @@ export const Gallery = () => {
         <div className="galleryContainer">
             {Housings.map((housing) => (
                 <article className="gallery-card" key={housing.id}>
-                    <Link to={`/Housing/${housing.id}`} className="gallery-link">
+                    <Link to={`/housings/${housing.id}`} className="gallery-link">
                         <img
                             src={housing.cover}
                             alt={housing.title}
