@@ -8,9 +8,10 @@ export const Home = () => {
     <main>
       <Banner
         BannerImg={BannerHome}
-        content={"Chez vous, partout et ailleurs"}
+        content={"Chez vous, partout et ailleurs" } pageType="home"
       />
       <Gallery />
     </main>
   )
 };
+

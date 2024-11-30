@@ -8,7 +8,7 @@ export const About = () => {
     return (
         <div className="page-container">
             <main>
-            <Banner BannerImg={BannerAbout} />
+            <Banner BannerImg={BannerAbout} pageType="about" />
                 <div className="collapse-container">
                     {infosKasa.map((data, index) => (
                         <Collapse

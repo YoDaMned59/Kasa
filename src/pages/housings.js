@@ -1,3 +1,4 @@
+// src/pages/Housings.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import housingData from '../data/housings.json';
@@ -21,6 +22,7 @@ export const Housings = () => {
             navigate('/error');
         }
     }, [id, navigate]);
+
     if (!housing) {
         return null;
     }
@@ -28,21 +30,23 @@ export const Housings = () => {
     return (
         <main className="housing-page">
             <Carrousel images={housing.pictures} />
-            <div className="housing-info">
-                <h1>{housing.title}</h1>
-                <p className="location">
-                    {`${housing.location.split(' - ')[1]?.split(' ')[0] || 'Paris'}, ${housing.location.split(' - ')[0] || 'Ile de France'}`}
-                </p>
-                <Tags tags={housing.tags} />
-                <Rating rating={housing.rating} />
-                <Host host={housing.host} />
+            <div className="informations-of-lodging">
+                <div className="housing-info">
+                    <h1 className="lodging-title-in-lodging-page">{housing.title}</h1>
+                    <p className="location-of-lodging">
+                        {`${housing.location.split(' - ')[1]?.split(' ')[0] || 'Paris'}, ${housing.location.split(' - ')[0] || 'Ile de France'}`}
+                    </p>
+                    <Tags tags={housing.tags} />
+                </div>
             </div>
+            <Host host={housing.host} />
+                    <Rating rating={housing.rating} />
             <div className="collapse-section">
                 <Collapse title="Description" content={housing.description} />
             </div>
             <div className="collapse-section">
-                <Collapse 
-                    title="Équipements" 
+                <Collapse
+                    title="Équipements"
                     content={
                         <ul>
                             {housing.equipments.map((equipment, index) => (

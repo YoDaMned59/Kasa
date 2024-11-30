@@ -1,19 +1,23 @@
-import React from 'react';
-
+// src/components/Rating.js
+import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import "../styles/rating.scss"
 
 export const Rating = ({ rating }) => {
-    // Crée un tableau d'étoiles pour la note
-    const filledStars = Array.from({ length: Math.round(rating) }, (_, index) => index);
-    const emptyStars = Array.from({ length: 5 - filledStars.length }, (_, index) => index);
+    const stars = [1, 2, 3, 4, 5];
 
     return (
-        <div className="rating">
-            {filledStars.map((_, index) => (
-                <i key={index} className="fa fa-star filled"></i>
+        <section className="rating_container">
+            {stars.map((num) => (
+                <FontAwesomeIcon 
+                    icon={faStar} 
+                    key={num} 
+                    className={num <= rating ? "star star-full" : "star star-empty"}
+                />
             ))}
-            {emptyStars.map((_, index) => (
-                <i key={index} className="fa fa-star"></i>
-            ))}
-        </div>
+        </section>
     );
-};
+}
+
+

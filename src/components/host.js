@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const Host = ({ host }) => {
     return (
         <div className="host">
@@ -11,3 +10,4 @@ export const Host = ({ host }) => {
         </div>
     );
 };
+

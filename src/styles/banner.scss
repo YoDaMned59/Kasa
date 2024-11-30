@@ -1,35 +1,69 @@
+/* .banner-container */
 .banner-container {
-    position: relative;
-    width: 90%;
-    height: 223px;
-    margin: 0 auto;
-    margin-top: 50px;
-    overflow: hidden;
-    border-radius: 25px;
-  
-    .banner-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
+  position: relative;
+  width: 90%; /* Largeur par défaut pour les grands écrans */
+  height: 223px; /* Hauteur par défaut pour les grands écrans */
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 1px solid transparent; /* Bordure transparente par défaut */
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 50%; /* Verticalement centré par défaut */
+    left: 50%; /* Centré horizontalement par défaut */
+    transform: translate(-50%, -50%); /* Centré à la fois vertical et horizontal */
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+  }
+
+  /* Responsive : Tablet (768px à 1024px) */
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 90%; /* Largeur spécifique pour les tablettes */
+    height: 160px; /* Ajustez la hauteur pour les tablettes */
+    margin-top: 30px; /* Ajustement du margin-top pour les tablettes */
+
     .banner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 32px;
-      font-weight: bold;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-      text-align: center;
-      margin: 0;
-      font-family: Monserrat, sans-serif;
-      font-size: 48px;
+      font-size: 32px; /* Réduit la taille du texte pour tablette */
+      text-align: left; /* Alignement du texte à gauche sur tablette */
+      padding-left: 20px; /* Ajout d'un padding à gauche */
+      top: 50%; /* Position verticale du texte */
+      transform: translateY(-50%); /* Alignement vertical correct du texte */
+      left: 0; /* Alignement du texte à gauche de l'image */
     }
   }
-  
-  
-  
 
+  /* Responsive : Mobile (jusqu'à 767px) */
+  @media screen and (max-width: 767px) {
+    width: 335px; /* Largeur spécifique pour les mobiles */
+    height: 111px; /* Hauteur spécifique pour les mobiles */
+    gap: 0; /* Aucune espace entre les éléments */
+    border-radius: 25px; /* Bordure arrondie sur mobile */
+    margin-top: 10px; /* Ajustement du margin-top pour la version mobile */
 
+    /* Pas d'opacité à 0, la bannière est visible */
+    opacity: 1; /* Assurez-vous que l'opacité est à 1 pour la rendre visible */
+
+    .banner-text {
+      font-size: 20px; /* Réduit la taille du texte pour mobile */
+      text-align: left; /* Alignement du texte à gauche sur mobile */
+      padding-left: 10px; /* Ajout d'un padding à gauche */
+      top: 50%; /* Position verticale du texte */
+      transform: translateY(-50%); /* Alignement vertical correct du texte */
+      left: 0; /* Alignement du texte à gauche de l'image */
+    }
+  }
+}
