@@ -7,7 +7,10 @@ export const Collapse = ({ title, content }) => {
 
     return (
         <div className={`collapse ${isOpen ? "open" : ""}`}>
-            <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
+            <div
+                className="collapse-header"
+                onClick={() => setIsOpen((prev) => !prev)}
+            >
                 <h2>{title}</h2>
                 <span className="collapse-icon">
                     {isOpen ? (
@@ -19,14 +22,9 @@ export const Collapse = ({ title, content }) => {
             </div>
             {isOpen && (
                 <div className="collapse-content">
-                    <p>{content}</p>
+                    {typeof content === "string" ? <p>{content}</p> : content}
                 </div>
             )}
         </div>
     );
 };
-
-
-
-
-

@@ -1,13 +1,12 @@
-/* .banner-container */
 .banner-container {
   position: relative;
-  width: 90%; /* Largeur par défaut pour les grands écrans */
-  height: 223px; /* Hauteur par défaut pour les grands écrans */
+  width: 90%;
+  height: 223px;
   margin: 0 auto;
   margin-top: 50px;
   overflow: hidden;
   border-radius: 25px;
-  border: 1px solid transparent; /* Bordure transparente par défaut */
+  border: 1px solid transparent;
 
   .banner-image {
     width: 100%;
@@ -18,9 +17,9 @@
 
   .banner-text {
     position: absolute;
-    top: 50%; /* Verticalement centré par défaut */
-    left: 50%; /* Centré horizontalement par défaut */
-    transform: translate(-50%, -50%); /* Centré à la fois vertical et horizontal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 48px;
     font-weight: bold;
@@ -30,40 +29,35 @@
     margin: 0;
   }
 
-  /* Responsive : Tablet (768px à 1024px) */
   @media screen and (max-width: 1024px) and (min-width: 768px) {
-    width: 90%; /* Largeur spécifique pour les tablettes */
-    height: 160px; /* Ajustez la hauteur pour les tablettes */
-    margin-top: 30px; /* Ajustement du margin-top pour les tablettes */
+    width: 90%;
+    height: 160px;
+    margin-top: 30px;
 
     .banner-text {
-      font-size: 32px; /* Réduit la taille du texte pour tablette */
-      text-align: left; /* Alignement du texte à gauche sur tablette */
-      padding-left: 20px; /* Ajout d'un padding à gauche */
-      top: 50%; /* Position verticale du texte */
-      transform: translateY(-50%); /* Alignement vertical correct du texte */
-      left: 0; /* Alignement du texte à gauche de l'image */
+      font-size: 32px;
+      text-align: left;
+      padding-left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0; 
     }
   }
 
-  /* Responsive : Mobile (jusqu'à 767px) */
   @media screen and (max-width: 767px) {
-    width: 335px; /* Largeur spécifique pour les mobiles */
-    height: 111px; /* Hauteur spécifique pour les mobiles */
-    gap: 0; /* Aucune espace entre les éléments */
-    border-radius: 25px; /* Bordure arrondie sur mobile */
-    margin-top: 10px; /* Ajustement du margin-top pour la version mobile */
-
-    /* Pas d'opacité à 0, la bannière est visible */
-    opacity: 1; /* Assurez-vous que l'opacité est à 1 pour la rendre visible */
+    width: 335px;
+    height: 111px;
+    border-radius: 25px;
+    margin-top: 10px;
+    opacity: 1;
 
     .banner-text {
-      font-size: 20px; /* Réduit la taille du texte pour mobile */
-      text-align: left; /* Alignement du texte à gauche sur mobile */
-      padding-left: 10px; /* Ajout d'un padding à gauche */
-      top: 50%; /* Position verticale du texte */
-      transform: translateY(-50%); /* Alignement vertical correct du texte */
-      left: 0; /* Alignement du texte à gauche de l'image */
+      font-size: 20px; 
+      text-align: left; 
+      padding-left: 10px; 
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
     }
   }
 }

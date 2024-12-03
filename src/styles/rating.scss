@@ -1,13 +1,26 @@
-.star {
-    color: #e0e0e0;
-    margin: 0 2px;
+.rating_container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 10px;
+    gap: 10px;
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        gap: 0px;
 }
+}
+.star {
+    width: 36px;
+    height: 36px;
 
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        margin: 0;
+}
+}
 .star-full {
     color: #FF6060;
-
 }
 
 .star-empty {
     color: #E3E3E3;
 }
+

@@ -1,4 +1,3 @@
-// src/pages/Housings.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import housingData from '../data/housings.json';
@@ -15,7 +14,7 @@ export const Housings = () => {
     const [housing, setHousing] = useState(null);
 
     useEffect(() => {
-        const selectedHousing = housingData.find(housing => housing.id === id);
+        const selectedHousing = housingData.find((housing) => housing.id === id);
         if (selectedHousing) {
             setHousing(selectedHousing);
         } else {
@@ -29,22 +28,22 @@ export const Housings = () => {
 
     return (
         <main className="housing-page">
-            <Carrousel images={housing.pictures} />
-            <div className="informations-of-lodging">
-                <div className="housing-info">
-                    <h1 className="lodging-title-in-lodging-page">{housing.title}</h1>
-                    <p className="location-of-lodging">
-                        {`${housing.location.split(' - ')[1]?.split(' ')[0] || 'Paris'}, ${housing.location.split(' - ')[0] || 'Ile de France'}`}
-                    </p>
+            <div className="carrousel-container">
+                <Carrousel images={housing.pictures} />
+            </div>
+            <div className="housing-details">
+                <div className="housing-details__left">
+                    <h1 className="housing-details__title">{housing.title}</h1>
+                    <h3 className="housing-details__location">{housing.location}</h3>
                     <Tags tags={housing.tags} />
                 </div>
-            </div>
-            <Host host={housing.host} />
+                <div className="housing-details__right">
+                    <Host host={housing.host} />
                     <Rating rating={housing.rating} />
-            <div className="collapse-section">
-                <Collapse title="Description" content={housing.description} />
+                </div>
             </div>
-            <div className="collapse-section">
+            <div className="collapse-housings">
+                <Collapse title="Description" content={housing.description} />
                 <Collapse
                     title="Équipements"
                     content={

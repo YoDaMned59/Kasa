@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/tags.scss"
 
 export const Tags = ({ tags }) => {
     return (
