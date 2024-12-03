@@ -10,22 +10,17 @@
     width: 100%;
     max-width: 1024px;
 }
-
 .collapse {
     width: 100%;
     max-width: 1023px;
-    margin-left: 208.5px;
-    margin-right: 208.5px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;   
+    overflow: hidden;
     border-radius: 15px;
-
     &.open {
         border-radius: 15px 15px 0 0;
         background-color: #F6F6F6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
     .collapse-header {
         display: flex;
         justify-content: space-between;
@@ -34,30 +29,25 @@
         color: white;
         padding: 16px;
         cursor: pointer;
-
         h2 {
             margin: 0;
             font-family: Montserrat, sans-serif;
             font-size: 18px;
             text-align: left;
         }
-
         .collapse-icon i {
             width: 24px;
             height: 13.71px;
             position: relative;
             transition: transform 0.7s ease, opacity 0.7s ease;
         }
-
         .fa-chevron-up {
             transform: rotate(-180deg);
         }
-
         .fa-chevron-down {
             transform: rotate(180deg);
         }
     }
-
     .collapse-content {
         padding: 16px;
         background-color: #F6F6F6;
