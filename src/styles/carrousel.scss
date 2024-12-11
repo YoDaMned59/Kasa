@@ -48,3 +48,34 @@
         z-index: 10;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .carrousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 335px;
+        height: 255px;
+      }
+      .carrousel {
+        width: 335px;
+        height: 255px;
+        gap: 0px;
+        opacity: 0px;
+      }
+
+    .carousel_arrow {
+        width: 11.67px;
+        height: 19.8px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+        transition: opacity 0.3s ease;
+    }
+
+    .slideCount {
+        display: none;
+    }
+}

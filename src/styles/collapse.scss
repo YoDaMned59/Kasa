@@ -6,7 +6,6 @@
     margin: 0 auto;
     margin-top: 38px;
     margin-bottom: 38px;
-    padding: 20px;
     width: 100%;
     max-width: 1024px;
 }
@@ -15,7 +14,7 @@
     max-width: 1023px;
     background-color: #fff;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 5px;
     &.open {
         border-radius: 15px 15px 0 0;
         background-color: #F6F6F6;

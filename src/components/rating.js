@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import "../styles/rating.scss"
+import "../styles/rating.scss";
 
 export const Rating = ({ rating }) => {
     const stars = [1, 2, 3, 4, 5];
@@ -17,6 +17,7 @@ export const Rating = ({ rating }) => {
             ))}
         </section>
     );
-}
+};
+
 
 

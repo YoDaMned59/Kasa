@@ -23,3 +23,18 @@
         color: #333;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .host {
+        order: 2;
+
+        &-name {
+            font-size: 12px;
+        }
+
+        &-image {
+            width: 32px;
+            height: 32px;          
+        }
+    }
+}

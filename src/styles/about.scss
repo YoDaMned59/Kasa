@@ -1,0 +1,19 @@
+.page-container {
+    .collapse-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-container {
+        .banner-container {
+            width: 90%;
+            height: 111px;
+            border-radius: 10px;
+        }
+
+        .collapse-container {
+            width: 90%;
+        }
+    }
+}
